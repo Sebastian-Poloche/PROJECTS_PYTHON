@@ -17,7 +17,7 @@ class Cliente():
         descuento = self.calcular_descuento()
         return self.valor_compra - descuento
     
-def menu():
+"""def menu():
     menu_usuario = int(input("Que opcion deseas usar\n1. Crear Cliente\n2. Ver Clientes\n3. Calcular total a pagar de un cliente\n4. Salir"))
     for i in menu_usuario:
         if i > 4:
@@ -27,13 +27,9 @@ def menu():
         if i == 2:
             # opcion para ver clientes creados
         #if i == 3:
-            Cliente.calcular_total_pagar()
+            Cliente.calcular_total_pagar()"""
 
-def crear_cliente():
-    nombre_nuevo_usuario = str(input("Ingresa tu nombre\n>>> "))
-    valor_compras = validar_valor_compra()
-    cliente_nuevo = Cliente(nombre_nuevo_usuario, valor_compras)
-    return cliente_nuevo
+clientes = []
 
 def validar_valor_compra():
     while True:
@@ -46,7 +42,15 @@ def validar_valor_compra():
         except ValueError:
             print("Error: debes ingresar un número válido.")
 
+def crear_cliente():
+    while True:
+        nombre_cliente = str(input("Ingresar nombre de usuario\n>>> ")),
+        valor_cliente = float(input("Ingresar valor de las compras\n>>> "))
+
+        return
+
 def main():
+    print("Bienvenido al Banco Rosalia")
     cliente = crear_cliente()
 
     descuento = cliente.calcular_descuento()
